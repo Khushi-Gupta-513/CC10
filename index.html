@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Product Page</title>
+    <title>E-commerce Product Management</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2 id="product-name">Sample Product</h2>
-    <p id="product-price">$100</p>
-    
-    <label for="size">Select Size:</label>
-    <select id="size">
-        <option value="small">Small: In Stock</option>
-        <option value="medium">Medium: In Stock</option>
-        <option value="large">Large: Out of Stock</option>
-    </select>
-    
-    <button id="purchase-btn">Purchase</button>
+    <div class="product-container">
+        <h2 id="product-name">Stylish T-Shirt</h2>
+        <p id="product-price">$20.00</p>
+        
+        <label for="size">Select Size:</label>
+        <select id="size">
+            <option value="small" data-price="20" data-availability="in-stock">Small: In Stock</option>
+            <option value="medium" data-price="25" data-availability="in-stock">Medium: In Stock</option>
+            <option value="large" data-price="30" data-availability="out-of-stock">Large: Out of Stock</option>
+            <option value="xl" data-price="35" data-availability="in-stock">XL: In Stock</option>
+        </select>
+
+        <button id="purchase-button" disabled>Purchase</button>
+    </div>
+
+    <h3>Add New Product:</h3>
+    <form id="add-product-form">
+        <input type="text" id="new-product-name" placeholder="Product Name" required>
+        <input type="number" id="new-product-price" placeholder="Product Price" required>
+        <select id="new-product-size" required>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="xl">XL</option>
+        </select>
+        <select id="new-product-availability" required>
+            <option value="in-stock">In Stock</option>
+            <option value="out-of-stock">Out of Stock</option>
+        </select>
+        <button type="submit">Add Product</button>
+    </form>
 
     <script src="main.js"></script>
 </body>
