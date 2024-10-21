@@ -23,4 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
             purchaseButton.disabled = true;
         }
     });
+
+    // Handle purchase button click
+    purchaseButton.addEventListener('click', function () {
+        const selectedSize = sizeDropdown.value;
+        const sizeDetails = sizePriceMapping[selectedSize];
+
+        if (sizeDetails.stock) {
+            alert('Purchase successful!');
+        } else {
+            alert('Sorry, this product is out of stock.');
+        }
+    });
 });
