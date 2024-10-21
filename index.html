@@ -7,20 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="product-container">
-        <h2 id="product-name">Stylish T-Shirt</h2>
-        <p id="product-price">$20.00</p>
-        
-        <label for="size">Select Size:</label>
-        <select id="size">
-            <option value="small" data-price="20" data-availability="in-stock">Small: In Stock</option>
-            <option value="medium" data-price="25" data-availability="in-stock">Medium: In Stock</option>
-            <option value="large" data-price="30" data-availability="out-of-stock">Large: Out of Stock</option>
-            <option value="xl" data-price="35" data-availability="in-stock">XL: In Stock</option>
-        </select>
+    <h2 id="product-name">Sample Product</h2>
+    <p id="product-price">$100</p>
+    
+    <label for="size">Select Size:</label>
+    <select id="size">
+        <option value="small">Small: In Stock</option>
+        <option value="medium">Medium: In Stock</option>
+        <option value="large">Large: Out of Stock</option>
+    </select>
+    
+    <button id="purchase-btn">Purchase</button>
 
-        <button id="purchase-button" disabled>Purchase</button>
-    </div>
 
     <h3>Add New Product:</h3>
     <form id="add-product-form">
